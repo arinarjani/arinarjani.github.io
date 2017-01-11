@@ -1,55 +1,41 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: http://mozilla.github.io/nunjucks/ -->
+<!-- jade: http://jade-lang.com/ -->
+<!-- haml: http://haml.info/tutorial.html -->
+<!-- hbs(handlebars): http://handlebarsjs.com/expressions.html -->
 <!--
   original: http://www.chrismorata.com/resume/
   Author: Chris Morata
  -->
 
 <!DOCTYPE html>
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
 <head>
   <meta charset="utf-8">
 
   <title>R&eacute;sum&eacute; of Arin Arjani</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <!-- change chrome's theme color on mobile -->
-  <meta name="theme-color" content="#028900" >
+  <meta name="theme-color" content="darkslategray" >
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
   <!-- CSS concatenated and minified via ant build script-->
-  <link rel="stylesheet" href="styles.css">
-  <!--[if lt IE 9]>
-<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-  <!-- end CSS-->
-	<script type="text/javascript">
-        document.documentElement.className = document.documentElement.className.replace("no-js", "js");
-    </script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="resources/js/jquery-1.6.2.min.js"><\/script>')</script>
-<script type="text/javascript">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-5477106-4']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 </head>
 
 <body id="resume">
 
-      <section class="cf">
+      <section class="container">
 
         <header>
             <h1 id="logo-resume">Arin Arjani</h1>
@@ -65,8 +51,10 @@
 
             </div>
         </header>
+        
+        <div class="content">
 
-        <section>
+        <section class="left">
             <article>
                 <h2>Education</h2>
                 <h3>College of Souther Nevada</h3>
@@ -88,16 +76,14 @@
 
             <article>
                 <h2>Experience</h2>
-
-                <span class="job-daterange">April 2015 - Present</span>
                 <h3>Arin Hotel and Casino</h3>
+                <span class="job-daterange">April 2015 - Present</span>
                 <h4>Cook I</h4>
                 <p>
                     I am responsible for knowledge of all menu items, how to work the pizza station, grill station, and salad/desert station.
                 </p>
-
-                <span class="job-daterange">July 2012 - September 2014</span>
                 <h3>Home Plate Grill and Bar</h3>
+                <span class="job-daterange">July 2012 - September 2014</span>
                 <h4>Busser</h4>
                 <p>
                     I would assist guests in menu suggestions, give directions for anything asked that was in town, assist with any problems or concerns the guest(s) have, and stay up to date on changes to menu items or anything else management informs to me.
@@ -109,43 +95,37 @@
 
             </article>
         </section>
-        <aside>
+        <section class="right">
         	<h2>Skills</h2>
             <dl>
             	<dt>Learning</dt>
-                <dd>FreeCodeCamp</dd>
-                <dd>Udemy</dd>
-		            <dd>WatchandCode</dd>
+                <dd><i class="fa fa-free-code-camp fcc"></i> FreeCodeCamp</dd>
+                <dd><i class="fa fa-puzzle-piece wac"></i>  WatchandCode</dd>
+                <dd><i class="fa fa-book udemy"></i>  Udemy</dd>
             </dl>
 
             <dl>
             	<dt>Proficiencies</dt>
-                <dd>HTML(5)</dd>
-                <dd>CSS3</dd>
-                <dd>JavaScript</dd>
-                <dd>Responsive Web Design</dd>
+                <dd><i class="fa fa-html5 html"></i>  HTML</dd>
+                <dd><i class="fa fa-css3 css"></i>  CSS3</dd>
+                <dd><span class="js">&lcub; &rcub;</span>  JavaScript</dd> <!-- source: https://dev.w3.org/html5/html-author/charref -->
+                <dd><i class="fa fa-code rwd"></i> Responsive Web Design</dd>
             </dl>
             <dl>
               <h2>Portfolio</h2>
               <dt>
-                <dd><a href="https://github.com/arinarjani" target="_blank">Github</a></dd>
-                <dd><a href="http://codepen.io/arin_arjani/full/GZLLGm/" target="_blank">CodePen</a></dd>
+                <dd><i class="fa fa-github github"></i>  <a href="https://github.com/arinarjani" target="_blank">Github</a></dd>
+                <dd><i class="fa fa-codepen codepen"></i>  <a href="http://codepen.io/arin_arjani/full/GZLLGm/" target="_blank">CodePen</a></dd>
               </dt>
 	          </dl>
 
-        </aside>
+        </section>
+        </div>
 
         <footer>
         	Professional references available upon request.
         </footer>
-
-        <!--
-
-<p id="next-steps">
-      <span class="btn print">Print this Page</span>
-  </p>
-
-  <script type="text/javascript" src="resources/js/util.js"></script>
-        -->
-
     </section>
+</body>
+</html>
+
