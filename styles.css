@@ -2,129 +2,150 @@
 original: http://www.chrismorata.com/resume/
 Author: Chris Morata
 */
-
-@charset "UTF-8";
-
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
-@import url('reset.css');
-
-/* Additional Resets */
-article, aside, canvas, details,
-figcaption, figure, footer, header,
-hgroup, nav, section, summary, video {
-    display: block;
-}
-i, em{ font-style: italic;}
-b, strong{ font-weight: bold;}
-
-/************************************************
-***************  PAGE ELEMENTS  *****************
-************************************************/
-body{ padding: 15px; background-color: #eee; font-family: Georgia, "Times New Roman", Times, serif; color: #252525;}
-body#resume{ font-family: 'Open Sans', Helvetica, Arial, sans-serif;}
-
-h2,h3,h4{}
-h2{ font-size: 24px; font-weight: 700; margin: 0 0 15px; text-transform: uppercase; color: #165EFA;}
-
-h3{ font-size: 18px; font-weight: 400; margin: 8px 0 5px; line-height: 1.25em;}
-
-h4{ font-size: 16px; font-weight: 300; font-style: italic; margin-bottom: 8px;}
-
-p{ line-height: 1.5em; margin:0 0 18px; font-size: 15px;}
-#resume p{ font-weight: 300; line-height: 1.4em;}
-
-a{ color: #165EFA; text-decoration: none;}
-	a:hover{ text-decoration: underline;}
-
-img{ max-width: 100%;}
-
-/***********************************************
-************  STRUCTURAL ELEMENTS  *************
-************************************************/
-body > section{ background-color: #fff; max-width: 740px; padding: 20px 25px; margin: 0 auto 15px;}
-header{ overflow: hidden; margin-bottom: 40px;}
-#logo{ display: block; margin: 0 auto 50px; max-height: 100px;}
-#logo-resume{ font-size: 2.5em;  margin: 0 auto;}
-#logo-print{ display: none;}
-
-#contact-info{ text-align: center; margin: 0 auto;}
-	#contact-info p{ font-size: 14px; margin-bottom: 8px;}
-	#contact-info a{ color: #165EFA;}
-
-article{ margin-bottom: 20px;}
-
-.job-daterange{ font-size: 18px; color: #165EFA;}
-
-dl{ margin-bottom: 15px;}
-dt{ font-size: 21px; color: #165EFA; margin: 15px 0 8px;}
-	dd{ margin-bottom: 6px; font-weight: 300; font-size: 14px;}
-	dd:before{
-		content: "\00bb";
-		margin-right: 4px;
-	}
-
-#next-steps{ text-align: center; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #666; line-height: 2.5em !important; font-family: Georgia, "Times New Roman", Times, serif;}
-	#next-steps a{ color: #666;}
-
-footer{ clear: both; padding: 10px 0; margin-top: 40px; text-align: center; font-weight: 300; font-size: 24px; border-bottom: 5px solid #165EFA;}
-
-/***********************************************
-*************** GLOBAL CLASSES  ****************
-************************************************/
-.btn{ text-decoration: none; cursor: pointer;}
-	.btn:hover{ text-decoration: underline;}
-
-.cf:after{ content: ''; display: block; clear: both; visibility: hidden; height: 0;}
-
-
-/***********************************************
-*************** MEDIA QUERIES  *****************
-************************************************/
-@media screen and (min-width: 480px){
-	#logo-resume{ width: 54.054054%;}
-}
-
-@media screen and (min-width: 600px){
-	body{ padding: 20px 40px;}
-	body > section{ padding: 40px 50px;}
-	p#signature{ width: 40%; float: right;}
-
-	dl{ width: 33.3333%; float: left; margin-bottom: 20px;}
-}
-
-@media screen and (min-width: 800px){
-	#logo-resume{ float: left; margin: 0;}
-
-	#contact-info{ float: right; width: 30%; margin-top: 15px 0 0; text-align: left;}
-
-	body > section section{ width: 63.513514%; float: left; clear: left;}
-	aside{ float: right; width: 30%;}
-
-	dl{ width: auto; float: none; margin-bottom: 0;}
-		dd{ font-size: 16px;}
-
-	footer{ text-align: right;}
-}
-
-
-@media print{
-	body > section{ padding: 10px;}
-	p{ font-size: 14px;}
-	#next-steps{ display: none !important;}
-
-	#logo-resume{ display: none;}
-	#logo-print{ display: block; float: left; margin: 0;}
-
-	#contact-info{ float: right; width: 30%; margin-top: 15px 0 0; text-align: left;}
-
-	body > section section{ width: 63.513514%; float: left; clear: left;}
-	aside{ float: right; width: 30%;}
-
-	dl{ width: auto; float: none; margin-bottom: 0;}
-		dd{ font-size: 14px;}
-
-	footer{ text-align: right;}
-}
-/*ORIGINAL
-
+/*
+==================
+-----DEFAULTS-----
+==================
 */
+html,body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: darkslategray;
+  font-family: sans-serif;
+}
+
+/* style all links */
+a {
+  text-decoration: none;
+  color: #165EFA;
+}
+a:hover {
+  text-decoration: line-through;
+}
+
+/* style all p elements */
+p {
+  font-weight: 300;
+  line-height: 1.4em;
+}
+
+/* give container a width, set its background to white, and center it */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+}
+
+.left {
+  width: 400px;
+}
+.right {
+  width: 200px;
+}
+/*
+==================
+-----HEADER-------
+==================
+*/
+
+/* In header, separate the h1 and the div by space between */
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* in h1, change the name size */
+h1 {
+  font-size: 2.5em;
+}
+
+
+/*
+==================
+-----CONTENT------
+==================
+*/
+/* set the content display to flex and justify-content to space between and flex-wrap to wrap */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
+/* color all .content headers */
+.content h2 {
+  color: #165EFA;
+}
+
+.content h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 8px 0 5px;
+    line-height: 1.25em;
+}
+
+.content h4 {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+/* style .content p and .content job-daterange */
+
+.content p {
+    font-weight: 300;
+    line-height: 1.4em;
+}
+
+.job-daterange {
+    font-size: 18px;
+    color: #165EFA;
+}
+
+/* style footer */
+footer {
+    padding: 10px 0;
+    margin-top: 10px;
+    text-align: right;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    border-bottom: 5px solid #165EFA;
+}
+/*
+==================
+------COLORS------
+==================
+*/
+.fcc {
+  color: darkgreen;
+}
+.udemy {
+  color: #17aa1c;
+}
+.wac {
+  color:#39949a;
+}
+.html {
+  color: orange;
+}
+.css {
+  color: blue;
+}
+.js {
+  color: red;
+}
+.rwd {
+  color: brown;
+}
+.github {
+  color: teal;
+}
+.codepen {
+  color: purple;
+}
