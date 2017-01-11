@@ -29,17 +29,17 @@ p {
 
 /* give container a width, set its background to white, and center it */
 .container {
-  max-width: 600px;
+  max-width: 800px;
   margin: 50px auto;
   background: #fff;
   padding: 20px;
 }
 
 .left {
-  width: 400px;
+  width: 550px;
 }
 .right {
-  width: 200px;
+  width: 250px;
 }
 /*
 ==================
