@@ -1,157 +1,132 @@
-/*
-==================
------DEFAULTS-----
-==================
-*/
-html,body {
-  margin: 0;
+body {
+  padding-top: 70px;
+  font-family: Spinnaker, sans-serif;
   padding: 0;
-  width: 100%;
-  height: 100%;
-  background: darkslategray;
-  font-family: sans-serif;
+  margin: 0;
 }
 
-/* style all links */
-a {
-  text-decoration: none;
-  color: #165EFA;
+.navbar-default {
+  background-color: #fff;
+  border-color: #fff;
 }
+
+.navbar-default .navbar-brand {
+  font-size: 1em;
+  color: #fff;
+}
+
+.navbar-right {
+  font-size: 0.9em;
+}
+
+.navbar {
+  background-image: none;
+  background-color: #320F00;
+  opacity: 0.8;
+  border: none;
+}
+
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+
+}
+
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #d52d30;
+}
+
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #d52d30;
+}
+
+.content-font {
+  font-size: 1.5em;
+}
+
+#about {
+  /* height:300px;  */
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.projects_word {
+  background-color: #543735;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  opacity: 0.8;
+}
+
+.contact {
+  background-color: blue;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  opacity: 0.8;
+}
+
+#portfolio {
+  padding-bottom: 50px;
+}
+
+/*
+    project titles
+*/
+
+/*
+    end project titles
+*/
+
+a {
+  color: #d52d30;
+}
+
 a:hover {
   text-decoration: line-through;
+  color: #d52d30;
 }
 
-/* style all p elements */
-p {
-  font-weight: 300;
-  line-height: 1.4em;
+.fcc,
+.fcc:hover {
+  color: #3b6427;
 }
 
-/* give container a width, set its background to white, and center it */
-.container {
-  max-width: 700px;
-  margin: 50px auto;
-  background: #fff;
-  padding: 40px;
+.description {
+  padding-bottom: 50px;
 }
 
-.left {
-  width: 500px;
-}
-.right {
-  width: 200px;
-}
-/*
-==================
------HEADER-------
-==================
-*/
-
-/* In header, separate the h1 and the div by space between */
-header {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+img {
+  width: 100%;
 }
 
-/* in h1, change the name size */
-h1 {
-  font-size: 2.5em;
+.contact {
+  height: 100px;
+  background-color: red;
 }
 
-
-/*
-==================
------CONTENT------
-==================
-*/
-/* set the content display to flex and justify-content to space between and flex-wrap to wrap */
-.content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  flex-direction: row;
-}
-/* color all .content headers */
-.content h2 {
-  color: #165EFA;
+.no_line a {
+  text-decoration: none;
+  padding: 10px;
 }
 
-.content h3 {
-    font-size: 18px;
-    font-weight: 400;
-    margin: 8px 0 5px;
-    line-height: 1.25em;
-}
-
-.content h4 {
-    font-size: 16px;
-    font-weight: 300;
-    font-style: italic;
-    margin-bottom: 8px;
-}
-
-/* style .content p and .content job-daterange */
-
-.content p {
-    font-weight: 300;
-    line-height: 1.4em;
-}
-
-.job-daterange {
-    font-size: 18px;
-    color: #165EFA;
-}
-
-/* make universities more prominent */
-.left h3 {
-  text-decoration: underline;
-}
-
-/* make .right dt's more prominent */
-.right dt {
-  font-size: 1.14em;
-}
-
-/* style footer */
-footer {
-    padding: 10px 0;
-    margin-top: 10px;
-    text-align: right;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 24px;
-    border-bottom: 5px solid #165EFA;
-}
-/*
-==================
-------COLORS------
-==================
-*/
-.fcc {
-  color: darkgreen;
-}
-.udemy {
-  color: #17aa1c;
-}
-.wac {
-  color:#39949a;
-}
-.html {
-  color: orange;
-}
-.css {
-  color: blue;
-}
-.js {
-  color: red;
-}
-.rwd {
-  color: brown;
-}
-.github {
-  color: teal;
-}
-.codepen {
-  color: purple;
+.contact_icons {
+  padding: 50px 0;
 }

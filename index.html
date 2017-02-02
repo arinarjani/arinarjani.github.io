@@ -1,131 +1,111 @@
-<!-- This is a static file -->
-<!-- served from your routes in server.js -->
-
-<!-- You might want to try something fancier: -->
-<!-- html/nunjucks docs: http://mozilla.github.io/nunjucks/ -->
-<!-- jade: http://jade-lang.com/ -->
-<!-- haml: http://haml.info/tutorial.html -->
-<!-- hbs(handlebars): http://handlebarsjs.com/expressions.html -->
 <!--
-  original: http://www.chrismorata.com/resume/
-  Author: Chris Morata
- -->
-
-<!DOCTYPE html>
+Design to-do list:
+- create pop-out images
+- better color scheme for "Projects" and "Contact"
+- better desciptions of images
+-->
+<!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-
-  <title>R&eacute;sum&eacute; of Arin Arjani</title>
-
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <!-- change chrome's theme color on mobile -->
-  <meta name="theme-color" content="darkslategray" >
-
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-  <!-- CSS concatenated and minified via ant build script-->
+  <link href='https://fonts.googleapis.com/css?family=Spinnaker' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-
+  <link rel="stylesheet" href="/assets/jquery.fullPage.css">
+  <meta name="theme-color" content="#320F00" >
 </head>
 
-<body id="resume">
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar" ></span>
+        <span class="icon-bar" ></span>
+        <span class="icon-bar" ></span>
+      </button>
+        <a class="navbar-brand" href="#">ARIN ARJANI</a>
+      </div>
+      <!-- end navbar-header -->
+      <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#about" >ABOUT</a></li>
+          <li><a href="#portfolio" >PORTFOLIO</a></li>
+          <li><a href="#contact" >CONTACT</a></li>
+        </ul>
+      </div>
+      <!-- end collapse -->
+    </div>
+    <!-- end containter-fluid -->
+  </nav>
+  <div class="container-fluid text-center content-font">
 
-      <section class="container">
+    <div class="row intro" id="about">
+      <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+        <p>I am a front-end web developer honing my skills on FreeCodeCamp ( FCC ), Udemy, Meetups, and books. After searching online for some time, I realized that I needed to stop jumping from course to course and really focus my efforts in one place at a time. I also need to make friends to feed off each other and become a better programmer.  My goals are to: 1) meet people in my area through the local <a href="http://www.meetup.com/VegasJS/" target="_blank">VegasJS Meetup</a>; 2) learn JavaScript; and 3) stay focussed.</p>
+      </div>
+      <!-- end #about -->
+    </div>
+    <!-- end .row -->
+    <div class="row projects_word">
+      <h3>Projects</h3>
+    </div>
+    <!-- end projects-row -->
 
-        <header>
-            <h1 id="logo-resume">Arin Arjani</h1>
-            <div id="contact-info">
-                <p>
-                    7534 Grassy Bank St.<br />
-                    Las Vegas, NV 89139
-                </p>
-                <p>
-                    <a href="mailto:arinarjani@gmail.com">arinarjani[at]google[dot]com</a><br />
-                    <a href="tel:7024396933">702.439.6933</a>
-                </p>
-
-            </div>
-        </header>
-        
-        <div class="content">
-
-        <section class="left">
-            <article>
-                <h2>Education</h2>
-                <h3>College of Souther Nevada</h3>
-                <p>
-                    Associate of Arts
-                    <br />
-                    Graduating June 2017 | Graduating GPA: 3.5
-                </p>
-            </article>
-
-            <article>
-                <h3>University of Nevada Las Vegas</h3>
-                <p>
-                    Bachelor of Science in Computer Science
-                    <br />
-                    Starting Fall 2017 | GPA: 3.5
-                </p>
-            </article>
-
-            <article>
-                <h2>Experience</h2>
-                <h3>Aria Hotel and Casino</h3>
-                <span class="job-daterange">April 2015 - Present</span>
-                <h4>Cook I</h4>
-                <p>
-                    I am responsible for knowledge of all menu items, how to work the pizza station, grill station, and salad/desert station.
-                </p>
-                <h3>Home Plate Grill and Bar</h3>
-                <span class="job-daterange">July 2012 - September 2014</span>
-                <h4>Busser</h4>
-                <p>
-                    I would assist guests in menu suggestions, give directions for anything asked that was in town, assist with any problems or concerns the guest(s) have, and stay up to date on changes to menu items or anything else management informs to me.
-
-                	<br />
-
-                </p>
-
-
-            </article>
-        </section>
-        <section class="right">
-        	<h2>Skills</h2>
-            <dl>
-            	<dt>Learning</dt>
-                <dd><i class="fa fa-free-code-camp fcc"></i> FreeCodeCamp</dd>
-                <dd><i class="fa fa-puzzle-piece wac"></i>  WatchandCode</dd>
-                <dd><i class="fa fa-book udemy"></i>  Udemy</dd>
-            </dl>
-
-            <dl>
-            	<dt>Proficiencies</dt>
-                <dd><i class="fa fa-html5 html"></i>  HTML</dd>
-                <dd><i class="fa fa-css3 css"></i>  CSS3</dd>
-                <dd><span class="js">&lcub;..&rcub;</span>  JavaScript</dd> <!-- source: https://dev.w3.org/html5/html-author/charref -->
-                <dd><i class="fa fa-code rwd"></i> Responsive Web Design</dd>
-            </dl>
-            <dl>
-              <h2>Portfolio</h2>
-              <dt>
-                <dd><i class="fa fa-github github"></i>  <a href="https://github.com/arinarjani?tab=repositories" target="_blank">Github</a></dd>
-                <dd><i class="fa fa-codepen codepen"></i>  <a href="http://codepen.io/arin_arjani/full/GZLLGm/" target="_blank">CodePen</a></dd>
-              </dt>
-	          </dl>
-
-        </section>
-        </div>
-
-        <footer>
-        	Professional references available upon request.
-        </footer>
-    </section>
+    <div class="row portfolio" id="portfolio">
+      <div class="row color_guessing_game">
+      <h3>Color Guessing Game</h3>
+    </div>
+      <!-- color guessing game -->
+      <div class="image">
+        <img src="https://c1.staticflickr.com/1/341/30716893623_53285c6bca_o.png" class="img-responsive" />
+      </div>
+      <!-- end image -->
+      <div class="description col-md-12">
+        <p>This is the Color Guessing game I created from the <a href="https://www.udemy.com/the-web-developer-bootcamp/" target="_blank">Web Developer Bootcamp</a>.  When you reload the page, the top RGB color changes to a randomly generated color chosen.  New colors also generate when the user clicks: "new colors", "easy", or "hard".  You have to click on each square until you guess the correct color.  All this was done with JavaScript.  Here is the link to the <a href="http://codepen.io/arin_arjani/full/eBZOEo/" target="_blank">CodePen</a> example.</p>
+      </div>
+      <!--end decsription -->
+      <!-- to-do list -->
+      <div class="image">
+        <img src="https://c1.staticflickr.com/1/17/30716893843_85d02bae34_o.png" class="img-responsive" />
+      </div>
+      <!-- end image -->
+      <div class="col-md-12 description">
+        <p>This is the To-Do list app I created from the <a href="https://www.udemy.com/the-web-developer-bootcamp/" target="_blank">Web Developer Bootcamp</a>.  You can hide/show the input field by clicking the "x" or "+" sign.  When you enter a new to-do item, it is added to the page.  Also when you hover over an item, the red trashcan appears to allow the deletion of the task.  All this was done with JQuery.  Here is a link to the <a href="http://codepen.io/arin_arjani/full/gLxRBJ/" target="_blank">CodePen</a> example.</p>
+      </div>
+      <!--end decsription -->
+      <!-- patatap clone -->
+      <div class="image">
+        <img src="https://c2.staticflickr.com/6/5564/31526088755_8aa57ab8d1_o.png" class="img-responsive" />
+      </div>
+      <!-- end image -->
+      <div class="description col-md-12">
+        <p>This is the <a href="http://www.patatap.com/" target="_blank">Patatap</a> game clone I created from the <a href="https://www.udemy.com/the-web-developer-bootcamp/" target="_blank">Web Developer Bootcamp</a>.  The user can press keys A-Z to create randomly placed circles that animate away.  Also a soound plays when a key is pressed that is specific to each A-Z letter.  The background color can be changed when the user presses the spacebar.  This was done with <a href="http://paperjs.org/" target="_blank">Paper JS ( animation )</a>, <a href="https://howlerjs.com/" target="_blank">Howler JS ( audio )</a>, and <a href="https://github.com/jonobr1/Neuronal-Synchrony" target="_blank">Neuronal-Synchrony ( sounds )</a>.  Here is a link to the <a href="http://codepen.io/arin_arjani/full/zoaJEQ/" target="_blank">CodePen</a> ( click on the black background to start ) example.</p>
+      </div>
+      <!--end decsription -->
+    </div>
+    <!-- end #porfolio -->
+    <div class="row projects_word">
+      <h3>Contact</h3>
+    </div>
+    <!-- end projects-row -->
+    <div class="row no_line contact_icons" id="contact">
+      <a target="_blank" href="https://github.com/arinarjani">
+        <i class="fa fa-github fa-3x"></i>
+      </a>
+      <a target="_blank" href="http://codepen.io/arin_arjani/">
+        <i class="fa fa-codepen fa-3x"></i>
+      </a>
+      <a target="_blank" href="https://www.freecodecamp.com/arinarjani">
+        <i class="fa fa-fire fa-3x"></i>
+      </a>
+    </div>
+    <!-- end .contact_icons -->
+  </div>
+  <!-- end container-fluid -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <scipt src="client.js"></scipt>
+  <script src="/assets/jquery.fullPage.js"></script>
 </body>
 </html>
-

@@ -1,0 +1,157 @@
+/*
+==================
+-----DEFAULTS-----
+==================
+*/
+html,body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: darkslategray;
+  font-family: sans-serif;
+}
+
+/* style all links */
+a {
+  text-decoration: none;
+  color: #165EFA;
+}
+a:hover {
+  text-decoration: line-through;
+}
+
+/* style all p elements */
+p {
+  font-weight: 300;
+  line-height: 1.4em;
+}
+
+/* give container a width, set its background to white, and center it */
+.container {
+  max-width: 700px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 40px;
+}
+
+.left {
+  width: 500px;
+}
+.right {
+  width: 200px;
+}
+/*
+==================
+-----HEADER-------
+==================
+*/
+
+/* In header, separate the h1 and the div by space between */
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* in h1, change the name size */
+h1 {
+  font-size: 2.5em;
+}
+
+
+/*
+==================
+-----CONTENT------
+==================
+*/
+/* set the content display to flex and justify-content to space between and flex-wrap to wrap */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
+/* color all .content headers */
+.content h2 {
+  color: #165EFA;
+}
+
+.content h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 8px 0 5px;
+    line-height: 1.25em;
+}
+
+.content h4 {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+/* style .content p and .content job-daterange */
+
+.content p {
+    font-weight: 300;
+    line-height: 1.4em;
+}
+
+.job-daterange {
+    font-size: 18px;
+    color: #165EFA;
+}
+
+/* make universities more prominent */
+.left h3 {
+  text-decoration: underline;
+}
+
+/* make .right dt's more prominent */
+.right dt {
+  font-size: 1.14em;
+}
+
+/* style footer */
+footer {
+    padding: 10px 0;
+    margin-top: 10px;
+    text-align: right;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    border-bottom: 5px solid #165EFA;
+}
+/*
+==================
+------COLORS------
+==================
+*/
+.fcc {
+  color: darkgreen;
+}
+.udemy {
+  color: #17aa1c;
+}
+.wac {
+  color:#39949a;
+}
+.html {
+  color: orange;
+}
+.css {
+  color: blue;
+}
+.js {
+  color: red;
+}
+.rwd {
+  color: brown;
+}
+.github {
+  color: teal;
+}
+.codepen {
+  color: purple;
+}
