@@ -1,111 +1,278 @@
-<!--
-Design to-do list:
-- create pop-out images
-- better color scheme for "Projects" and "Contact"
-- better desciptions of images
--->
-<!doctype html>
-<html>
+<!DOCTYPE html>
+
 <head>
-  <link href='https://fonts.googleapis.com/css?family=Spinnaker' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="/assets/jquery.fullPage.css">
-  <meta name="theme-color" content="#320F00" >
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/jquery.fullpage.css" /> -->
+    <link href='https://fonts.googleapis.com/css?family=Spinnaker' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesNew.css">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- for patatap -->
+    <script type="text/paperscript" canvas="canvas">
+    var sound = new Howl({
+      src: ['sounds/bubbles.mp3']
+    });
+
+    var circles = [];
+
+    keys = {
+      a: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/bubbles.mp3']
+        })
+      },
+      b: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/clay.mp3']
+        })
+      },
+      c: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/confetti.mp3']
+        })
+      },
+      d: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/corona.mp3']
+        })
+      },
+      e: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/dotted-spiral.mp3']
+        })
+      },
+      f: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/flash-1.mp3']
+        })
+      },
+      g: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/flash-2.mp3']
+        })
+      },
+      h: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/flash-3.mp3']
+        })
+      },
+      i: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/glimmer.mp3']
+        })
+      },
+      j: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/moon.mp3']
+        })
+      },
+      k: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/pinwheel.mp3']
+        })
+      },
+      l: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/piston-1.mp3']
+        })
+      },
+      m: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/piston-2.mp3']
+        })
+      },
+      n: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/piston-3.mp3']
+        })
+      },
+      o: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/splits.mp3']
+        })
+      },
+      p: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/squiggle.mp3']
+        })
+      },
+      q: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/strike.mp3']
+        })
+      },
+      r: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/suspension.mp3']
+        })
+      },
+      s: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/timer.mp3']
+        })
+      },
+      t: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/ufo.mp3']
+        })
+      },
+      u: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/veil.mp3']
+        })
+      },
+      v: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/wipe.mp3']
+        })
+      },
+      w: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/zig-zag.mp3']
+        })
+      },
+      x: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/prism-1.mp3']
+        })
+      },
+      y: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/prism-2.mp3']
+        })
+      },
+      z: {
+        sound: new Howl({
+          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/prism-3.mp3']
+        })
+      }
+    }
+
+    function generateColor() {
+      var color;
+      var num1 = Math.floor(Math.random() * 256);
+      var num2 = Math.floor(Math.random() * 256);
+      var num3 = Math.floor(Math.random() * 256);
+
+      color = "rgb(" + num1 + ", " + num2 + ", " + num3 + ")";
+
+      return color
+    }
+
+    function onKeyDown(event) {
+      // check if the key pressed is defined in the keys object
+      if (keys[event.key]) {
+        // generate a random point
+        var point = Point.random() * view.size;
+        // add a circle to the circles array
+        circles.push(
+        new Path.Circle({
+          center: point,
+          radius: 500,
+          fillColor: generateColor()
+        })
+        );
+        // play sound
+        keys[event.key].sound.play();
+    } else if ( event.key === 'enter') {
+        document.querySelector("canvas").style.background = generateColor();
+      }
+    }
+
+    function onFrame(){
+      var length = circles.length;
+      for(var i = 0; i < length; i++) {
+        circles[i].fillColor.hue += 2;
+        circles[i].scale(.9);
+      }
+    }
+    </script>
 </head>
-
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar" ></span>
-        <span class="icon-bar" ></span>
-        <span class="icon-bar" ></span>
-      </button>
-        <a class="navbar-brand" href="#">ARIN ARJANI</a>
-      </div>
-      <!-- end navbar-header -->
-      <div class="collapse navbar-collapse navbar-right" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a href="#about" >ABOUT</a></li>
-          <li><a href="#portfolio" >PORTFOLIO</a></li>
-          <li><a href="#contact" >CONTACT</a></li>
-        </ul>
-      </div>
-      <!-- end collapse -->
+    <div class="">
+        <div class="section top">
+            <h1>Arin Arjani</h1>
+            <h4>Everything below works in this window using &lt;canvas&gt; or &lt;iframe&gt;</h4>
+        </div>
+        <!-- color guessing game -->
+        <div class="section color">
+            <iframe class="color-guess-game" src="https://color-guessing-game.gomix.me/"></iframe>
+            <!-- end image -->
+            <div class="description col-md-12">
+              <p>This is the Color Guessing game I created from the <a href="https://www.udemy.com/the-web-developer-bootcamp/" target="_blank">Web Developer Bootcamp</a>.
+                 When you reload the page, the top RGB color changes to a randomly generated color chosen.  New colors also generate when the user clicks: "new colors",
+                 "easy", or "hard".  You have to click on each square until you guess the correct color.  All this was done with JavaScript.
+            </div>
+            <!--end decsription -->
+        </div>
+        <!-- to-do list -->
+        <div class="section todo">
+            <iframe class="todo-app" src="https://todo-arin-1.gomix.me/" width="" height=""></iframe>
+            <!-- end image -->
+            <div class="col-md-12 description">
+              <p>This is the To-Do list app I created from the <a href="https://www.udemy.com/the-web-developer-bootcamp/" target="_blank">Web Developer Bootcamp</a>.
+                  You can hide/show the input field by clicking the "x" or "+" sign.  When you enter a new to-do item, it is added to the page.  Also when you hover
+                  over an item, the red trashcan appears to allow the deletion of the task.  All this was done with JQuery.
+            </div>
+            <!--end decsription -->
+        </div>
+        <!-- patatap clone -->
+        <div class="section patatap">
+            <canvas id="canvas" ></canvas>
+            <div class="description col-md-12">
+              <p>This is the <a href="http://www.patatap.com/" target="_blank">Patatap</a> game clone I created from
+                  the <a href="https://www.udemy.com/the-web-developer-bootcamp/" target="_blank">Web Developer Bootcamp</a>.
+                  The user can press keys A-Z to create randomly placed circles that animate away.  Also a soound plays when a key is pressed that is
+                  specific to each A-Z letter.  The background color can be changed when the user presses the enter key.
+                  This was done with <a href="http://paperjs.org/" target="_blank">Paper JS ( animation )</a>,
+                  <a href="https://howlerjs.com/" target="_blank">Howler JS ( audio )</a>, and
+                  <a href="https://github.com/jonobr1/Neuronal-Synchrony" target="_blank">Neuronal-Synchrony ( sounds )</a>.
+            </div>
+            <!--end decsription -->
+        </div>
+        <div class="section footer">
+            <h1 class="contact">Contact</h1>
+            <div class="contact_icons" id="contact">
+                <div class="github icon">
+                    <a target="_blank" href="https://github.com/arinarjani?tab=repositories">
+                      <i class="fa fa-github fa-3x"></i>
+                    </a>
+                </div>
+                <div class="resume icon">
+                    <a target="_blank" href="http://arinarjani.github.io/resume">
+                      <i class="fa fa-list fa-3x"></i>
+                    </a>
+                </div>
+                <div class="fcc icon">
+                    <a target="_blank" href="https://www.freecodecamp.com/arinarjani">
+                      <i class="fa fa-fire fa-3x"></i>
+                    </a>
+                </div>
+                <div class="hackerRank icon">
+                    <a target="_blank" href="https://www.hackerrank.com/arinarjani">
+                      <i class="fa fa-header fa-3x"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- end .contact_icons -->
+        </div>
     </div>
-    <!-- end containter-fluid -->
-  </nav>
-  <div class="container-fluid text-center content-font">
-
-    <div class="row intro" id="about">
-      <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-        <p>I am a front-end web developer honing my skills on FreeCodeCamp ( FCC ), Udemy, Meetups, and books. After searching online for some time, I realized that I needed to stop jumping from course to course and really focus my efforts in one place at a time. I also need to make friends to feed off each other and become a better programmer.  My goals are to: 1) meet people in my area through the local <a href="http://www.meetup.com/VegasJS/" target="_blank">VegasJS Meetup</a>; 2) learn JavaScript; and 3) stay focussed.</p>
-      </div>
-      <!-- end #about -->
-    </div>
-    <!-- end .row -->
-    <div class="row projects_word">
-      <h3>Projects</h3>
-    </div>
-    <!-- end projects-row -->
-
-    <div class="row portfolio" id="portfolio">
-      <div class="row color_guessing_game">
-      <h3>Color Guessing Game</h3>
-    </div>
-      <!-- color guessing game -->
-      <div class="image">
-        <img src="https://c1.staticflickr.com/1/341/30716893623_53285c6bca_o.png" class="img-responsive" />
-      </div>
-      <!-- end image -->
-      <div class="description col-md-12">
-        <p>This is the Color Guessing game I created from the <a href="https://www.udemy.com/the-web-developer-bootcamp/" target="_blank">Web Developer Bootcamp</a>.  When you reload the page, the top RGB color changes to a randomly generated color chosen.  New colors also generate when the user clicks: "new colors", "easy", or "hard".  You have to click on each square until you guess the correct color.  All this was done with JavaScript.  Here is the link to the <a href="http://codepen.io/arin_arjani/full/eBZOEo/" target="_blank">CodePen</a> example.</p>
-      </div>
-      <!--end decsription -->
-      <!-- to-do list -->
-      <div class="image">
-        <img src="https://c1.staticflickr.com/1/17/30716893843_85d02bae34_o.png" class="img-responsive" />
-      </div>
-      <!-- end image -->
-      <div class="col-md-12 description">
-        <p>This is the To-Do list app I created from the <a href="https://www.udemy.com/the-web-developer-bootcamp/" target="_blank">Web Developer Bootcamp</a>.  You can hide/show the input field by clicking the "x" or "+" sign.  When you enter a new to-do item, it is added to the page.  Also when you hover over an item, the red trashcan appears to allow the deletion of the task.  All this was done with JQuery.  Here is a link to the <a href="http://codepen.io/arin_arjani/full/gLxRBJ/" target="_blank">CodePen</a> example.</p>
-      </div>
-      <!--end decsription -->
-      <!-- patatap clone -->
-      <div class="image">
-        <img src="https://c2.staticflickr.com/6/5564/31526088755_8aa57ab8d1_o.png" class="img-responsive" />
-      </div>
-      <!-- end image -->
-      <div class="description col-md-12">
-        <p>This is the <a href="http://www.patatap.com/" target="_blank">Patatap</a> game clone I created from the <a href="https://www.udemy.com/the-web-developer-bootcamp/" target="_blank">Web Developer Bootcamp</a>.  The user can press keys A-Z to create randomly placed circles that animate away.  Also a soound plays when a key is pressed that is specific to each A-Z letter.  The background color can be changed when the user presses the spacebar.  This was done with <a href="http://paperjs.org/" target="_blank">Paper JS ( animation )</a>, <a href="https://howlerjs.com/" target="_blank">Howler JS ( audio )</a>, and <a href="https://github.com/jonobr1/Neuronal-Synchrony" target="_blank">Neuronal-Synchrony ( sounds )</a>.  Here is a link to the <a href="http://codepen.io/arin_arjani/full/zoaJEQ/" target="_blank">CodePen</a> ( click on the black background to start ) example.</p>
-      </div>
-      <!--end decsription -->
-    </div>
-    <!-- end #porfolio -->
-    <div class="row projects_word">
-      <h3>Contact</h3>
-    </div>
-    <!-- end projects-row -->
-    <div class="row no_line contact_icons" id="contact">
-      <a target="_blank" href="https://github.com/arinarjani">
-        <i class="fa fa-github fa-3x"></i>
-      </a>
-      <a target="_blank" href="http://codepen.io/arin_arjani/">
-        <i class="fa fa-codepen fa-3x"></i>
-      </a>
-      <a target="_blank" href="https://www.freecodecamp.com/arinarjani">
-        <i class="fa fa-fire fa-3x"></i>
-      </a>
-    </div>
-    <!-- end .contact_icons -->
-  </div>
-  <!-- end container-fluid -->
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <scipt src="client.js"></scipt>
-  <script src="/assets/jquery.fullPage.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.2/paper-full.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.2/howler.js"></script>
+    <!-- <script type="text/javascript" src="./assets/jquery.fullPage.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#320F00', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+                menu: '#menu',
+                css3: true,
+                scrollingSpeed: 1000
+            });
+        });
+    </script> -->
 </body>
+
 </html>
