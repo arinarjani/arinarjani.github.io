@@ -18,15 +18,13 @@ body {
     color: #47EAEA;
 }
 
-/* h1 {
-    padding-top: 20%;
+h1 {
     font-size: 6rem;
 }
 
 h4 {
-    padding-top: 28.5%;
     font-weight: 900;
-} */
+} 
 
 .top {
   display: flex;
@@ -134,9 +132,9 @@ a {
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1500px) {
-    h1 {
+/*     h1 {
         padding-bottom:55%;
-    }
+    } */
     canvas {
         height: 95vh;
     }
