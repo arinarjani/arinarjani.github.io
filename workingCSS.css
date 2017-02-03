@@ -1,4 +1,9 @@
-body, html {
+body { text-align: center; }
+h1 {
+    font-size: 3rem;
+}
+
+/* body, html {
     padding: 0;
     margin: 0;
     height: 100%;
@@ -18,25 +23,14 @@ body {
     color: #47EAEA;
 }
 
-/* h1 {
-    padding-top: 20%;
+h1 {
+    padding-top: 30%;
     font-size: 6rem;
 }
 
 h4 {
     padding-top: 28.5%;
     font-weight: 900;
-} */
-
-.top {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-h1 {
-  padding-bottom: 30%;
 }
 
 p {
@@ -84,8 +78,11 @@ a {
 
 @media screen and (max-width: 500px) {
     h1 {
-        padding-bottom: 50%;
+        padding-top: 70%;
     }
+    h4 {
+        padding-top: 58%;
+        }
     canvas {
         height: 77vh;
     }
@@ -105,8 +102,11 @@ a {
 
 @media screen and (min-width: 500px) and (max-width: 700px) {
     h1 {
-        padding-bottom:0;
+        padding-top: 75%;
     }
+    h4 {
+        padding-top: 71%;
+        }
     canvas {
         height: 77vh;
     }
@@ -122,8 +122,11 @@ a {
 
 @media screen and (min-width: 700px) and (max-width: 1000px) {
     h1 {
-        padding-bottom:50%;
+        padding-top: 60%;
     }
+    h4 {
+        padding-top: 59%;
+        }
     canvas {
         height: 90vh;
     }
@@ -135,8 +138,11 @@ a {
 
 @media screen and (min-width: 1000px) and (max-width: 1500px) {
     h1 {
-        padding-bottom:55%;
+        padding-top: 64%;
     }
+    h4 {
+        padding-top: 59%;
+        }
     canvas {
         height: 95vh;
     }
@@ -148,8 +154,11 @@ a {
 
 @media screen and (min-width: 1500px) and (max-width: 2000px) {
     h1 {
-        padding-bottom:50%;
+        padding-top: 50%;
     }
+    h4 {
+        padding-top: 44%;
+        }
     canvas {
         height: 95vh;
     }
@@ -158,3 +167,4 @@ a {
         width: 100vw;
     }
 }
+ */
