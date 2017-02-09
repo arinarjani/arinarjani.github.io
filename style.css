@@ -1,0 +1,1001 @@
+body {
+    font-family: Spinnaker, sans-serif;
+}
+
+blockquote, body, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0
+}
+
+ol, ul {
+    list-style: none
+}
+
+body, html {
+    overflow: hidden
+}
+
+#fullpage, .section, body, html {
+    height: 100%
+}
+
+h1 {
+    font-size: 6em
+}
+
+h2, p {
+    font-size: 2em
+}
+
+#menu {
+    z-index: 70;
+    position: fixed
+}
+
+#menu li {
+    display: inline-block;
+    margin: 10px;
+    color: #000;
+    background: rgba(0, 0, 0, .5);
+    -webkit-border-radius: 10px;
+    border-radius: 10px
+}
+
+#menu li.active {
+    background: #666;
+    background: rgba(111, 115, 117, .8);
+    color: #fff
+}
+
+#menu li a, #menu li.active a:hover {
+    color: #B1B1FF;
+}
+
+#menu li:hover {
+    background: rgba(0, 0, 0, .8)
+}
+
+#menu li a, #menu li.active a {
+    padding: 9px 18px;
+    display: block
+}
+
+
+/* My own styles */
+
+body {
+    color: #47EAEA;
+}
+
+a {
+    color: #B1B1FF;
+    text-decoration: none;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.top h1 {
+    margin-top: 90%;
+    font-size: 8rem;
+}
+
+.top h4 {
+    font-size: 1.5rem;
+}
+
+.fa-angle-double-down {
+    color: white;
+    margin-top: 95%;
+    -webkit-animation: 0.8s linear 0s infinite alternate scroll-down;
+    -moz-animation: 0.8s linear 0s infinite alternate scroll-down;
+    -o-animation: 0.8s linear 0s infinite alternate scroll-down;
+    animation: 0.8s linear 0s infinite alternate scroll-down;
+}
+
+@-webkit-keyframes scroll-down {
+    from {
+        margin-top: 95%;
+    }
+    to {
+        margin-top: 100%;
+    }
+}
+
+@-moz-keyframes scroll-down {
+    from {
+        margin-top: 95%;
+    }
+    to {
+        margin-top: 100%;
+    }
+}
+
+@-o-keyframes scroll-down {
+    from {
+        margin-top: 95%;
+    }
+    to {
+        margin-top: 100%;
+    }
+}
+
+@keyframes scroll-down {
+    from {
+        margin-top: 95%;
+    }
+    to {
+        margin-top: 100%;
+    }
+}
+
+p {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.page-num {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.color-guess-game {
+    height: 90vh;
+    width: 99.5vw;
+}
+
+.todo-app {
+    height: 90vh;
+    width: 99.5vw;
+}
+
+#canvas {
+    height: 88vh;
+    background-color: black;
+    width: 100vw;
+}
+
+.contact_icons {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.icon {
+    padding: 10px;
+}
+
+.github i {
+    color: #BDDC8E;
+}
+
+.fcc i {
+    color: darkgreen;
+}
+
+.resume i {
+    color: #FFB732;
+}
+
+.hackerRank i {
+    color: #C8C1BB;
+}
+
+.footer {
+    background-color: #A22F2F;
+    text-align: center;
+}
+
+.footer h1 {
+    padding-top: 25%;
+    font-size: 8rem;
+}
+
+.big-icon {
+    font-size: 5rem;
+}
+
+@media screen and (max-width: 400px) {
+    .top h1 {
+        margin-top: 60%;
+        font-size: 3rem;
+    }
+    .top h4 {
+        font-size: 1rem;
+    }
+    .fa-angle-double-down {
+        color: white;
+        margin-top: 65%;
+        -webkit-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -moz-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -o-animation: 0.8s linear 0s infinite alternate scroll-down;
+        animation: 0.8s linear 0s infinite alternate scroll-down;
+    }
+    @-webkit-keyframes scroll-down {
+        from {
+            margin-top: 65%;
+        }
+        to {
+            margin-top: 72%;
+        }
+    }
+    @-moz-keyframes scroll-down {
+        from {
+            margin-top: 65%;
+        }
+        to {
+            margin-top: 72%;
+        }
+    }
+    @-o-keyframes scroll-down {
+        from {
+            margin-top: 65%;
+        }
+        to {
+            margin-top: 72%;
+        }
+    }
+    @keyframes scroll-down {
+        from {
+            margin-top: 65%;
+        }
+        to {
+            margin-top: 72%;
+        }
+    }
+    p {
+        font-size: 1rem;
+    }
+    .color-guess-game {
+        height: 75vh;
+        width: 99vw;
+    }
+    .todo-app {
+        height: 72vh;
+    }
+    #canvas {
+        height: 73vh;
+        background-color: black;
+        width: 100vw;
+    }
+    .footer h1 {
+        padding-top: 70%;
+        font-size: 3rem;
+    }
+    .big-icon {
+        font-size: 2rem;
+    }
+}
+
+
+/* media query for devices of height 560 and width 360 */
+
+@media screen and ( max-width: 360px) {
+    .top h1 {
+        margin-top: 50%;
+        font-size: 3rem;
+    }
+    .top h4 {
+        font-size: 1rem;
+    }
+    .fa-angle-double-down {
+        color: white;
+        margin-top: 45%;
+        -webkit-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -moz-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -o-animation: 0.8s linear 0s infinite alternate scroll-down;
+        animation: 0.8s linear 0s infinite alternate scroll-down;
+    }
+    @-webkit-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @-moz-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @-o-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    p {
+        font-size: 1rem;
+    }
+    .color-guess-game {
+        height: 65vh;
+        width: 99vw;
+    }
+    .todo-app {
+        height: 66vh;
+    }
+    #canvas {
+        height: 60vh;
+        background-color: black;
+        width: 100vw;
+    }
+    .footer h1 {
+        padding-top: 56%;
+        font-size: 3rem;
+    }
+    .big-icon {
+        font-size: 2rem;
+    }
+}
+
+
+/* iphone 5  portrait*/
+
+@media screen and (max-width: 320px) {
+    .top h1 {
+        margin-top: 70%;
+        font-size: 3rem;
+    }
+    .top h4 {
+        font-size: 1rem;
+    }
+    .fa-angle-double-down {
+        color: white;
+        margin-top: 45%;
+        -webkit-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -moz-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -o-animation: 0.8s linear 0s infinite alternate scroll-down;
+        animation: 0.8s linear 0s infinite alternate scroll-down;
+    }
+    @-webkit-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @-moz-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @-o-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    p {
+        font-size: 1rem;
+    }
+    .color-guess-game {
+        height: 60vh;
+        width: 99vw;
+    }
+    .todo-app {
+        height: 55vh;
+    }
+    #canvas {
+        height: 48vh;
+        background-color: black;
+        width: 100vw;
+    }
+    .footer h1 {
+        padding-top: 60%;
+        font-size: 3rem;
+    }
+    .big-icon {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .top h1 {
+        margin-top: 70%;
+        font-size: 3rem;
+    }
+    .top h4 {
+        font-size: 1rem;
+    }
+    .fa-angle-double-down {
+        color: white;
+        margin-top: 45%;
+        -webkit-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -moz-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -o-animation: 0.8s linear 0s infinite alternate scroll-down;
+        animation: 0.8s linear 0s infinite alternate scroll-down;
+    }
+    @-webkit-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @-moz-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @-o-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    p {
+        font-size: 1rem;
+    }
+    .color-guess-game {
+        height: 70vh;
+        width: 99vw;
+    }
+    .todo-app {
+        height: 68vh;
+    }
+    #canvas {
+        height: 63vh;
+        background-color: black;
+        width: 100vw;
+    }
+    .footer h1 {
+        padding-top: 70%;
+        font-size: 3rem;
+    }
+    .big-icon {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 380px) and (max-width: 400px) {
+    .top h1 {
+        margin-top: 70%;
+        font-size: 3rem;
+    }
+    .top h4 {
+        font-size: 1rem;
+    }
+    .fa-angle-double-down {
+        color: white;
+        margin-top: 45%;
+        -webkit-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -moz-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -o-animation: 0.8s linear 0s infinite alternate scroll-down;
+        animation: 0.8s linear 0s infinite alternate scroll-down;
+    }
+    @-webkit-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @-moz-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @-o-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    p {
+        font-size: 1rem;
+    }
+    .color-guess-game {
+        height: 70vh;
+        width: 99vw;
+    }
+    .todo-app {
+        height: 68vh;
+    }
+    #canvas {
+        height: 62vh;
+        background-color: black;
+        width: 100vw;
+    }
+    .footer h1 {
+        padding-top: 70%;
+        font-size: 3rem;
+    }
+    .big-icon {
+        font-size: 2rem;
+    }
+}
+
+@media screen and ( min-width: 400px) and (max-width: 490px) {
+    .top h1 {
+        margin-top: 70%;
+        font-size: 3rem;
+    }
+    .top h4 {
+        font-size: 1rem;
+    }
+    .fa-angle-double-down {
+        color: white;
+        margin-top: 45%;
+        -webkit-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -moz-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -o-animation: 0.8s linear 0s infinite alternate scroll-down;
+        animation: 0.8s linear 0s infinite alternate scroll-down;
+    }
+    @-webkit-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @-moz-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @-o-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    p {
+        font-size: 1rem;
+    }
+    .color-guess-game {
+        height: 76vh;
+        width: 99vw;
+    }
+    .todo-app {
+        height: 73vh;
+    }
+    #canvas {
+        height: 68vh;
+        background-color: black;
+        width: 100vw;
+    }
+    .footer h1 {
+        padding-top: 70%;
+        font-size: 3rem;
+    }
+    .big-icon {
+        font-size: 2rem;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 800px) {
+    .top h1 {
+        margin-top: 50%;
+        font-size: 3rem;
+    }
+    .fa-angle-double-down {
+        color: white;
+        margin-top: 45%;
+        -webkit-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -moz-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -o-animation: 0.8s linear 0s infinite alternate scroll-down;
+        animation: 0.8s linear 0s infinite alternate scroll-down;
+    }
+    @-webkit-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @-moz-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @-o-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    p {
+        font-size: 1rem;
+    }
+    .color-guess-game {
+        height: 90vh;
+        width: 99vw;
+    }
+    .todo-app {
+        height: 88vh;
+        width: 100vw;
+    }
+    #canvas {
+        height: 88vh;
+        background-color: black;
+        width: 100vw;
+    }
+    .footer h1 {
+        padding-top: 50%;
+        font-size: 5rem;
+    }
+}
+
+@media screen and (min-width: 810px) and (max-width: 1000px) {
+    .top h1 {
+        margin-top: 60%;
+        font-size: 5rem;
+    }
+    .top h4 {
+        font-size: 1.5rem;
+    }
+    .fa-angle-double-down {
+        color: white;
+        margin-top: 45%;
+        -webkit-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -moz-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -o-animation: 0.8s linear 0s infinite alternate scroll-down;
+        animation: 0.8s linear 0s infinite alternate scroll-down;
+    }
+    @-webkit-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @-moz-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @-o-keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    @keyframes scroll-down {
+        from {
+            margin-top: 45%;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    p {
+        font-size: 1.5rem;
+    }
+    .color-guess-game {
+        height: 82vh;
+        width: 99.5vw;
+    }
+    .todo-app {
+        height: 79vh;
+        width: 99.5vw;
+    }
+    #canvas {
+        height: 79vh;
+        background-color: black;
+        width: 100vw;
+    }
+    .footer h1 {
+        padding-top: 60%;
+        font-size: 3rem;
+    }
+    .big-icon {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1500px) {
+    .top h1 {
+        margin-top: 55%;
+        font-size: 5rem;
+    }
+    .top h4 {
+        font-size: 2rem;
+    }
+    .fa-angle-double-down {
+        color: white;
+        margin-top: 50%;
+        -webkit-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -moz-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -o-animation: 0.8s linear 0s infinite alternate scroll-down;
+        animation: 0.8s linear 0s infinite alternate scroll-down;
+    }
+    @-webkit-keyframes scroll-down {
+        from {
+            margin-top: 50%;
+        }
+        to {
+            margin-top: 53%;
+        }
+    }
+    @-moz-keyframes scroll-down {
+        from {
+            margin-top: 50%;
+        }
+        to {
+            margin-top: 53%;
+        }
+    }
+    @-o-keyframes scroll-down {
+        from {
+            margin-top: 50%;
+        }
+        to {
+            margin-top: 53%;
+        }
+    }
+    @keyframes scroll-down {
+        from {
+            margin-top: 50%;
+        }
+        to {
+            margin-top: 53%;
+        }
+    }
+    p {
+        font-size: 1.5rem;
+    }
+    .color-guess-game {
+        height: 88vh;
+        /* 88.5 */
+        width: 99.5vw;
+    }
+    .todo-app {
+        height: 88vh;
+        /* 88.5 */
+        width: 99.5vw;
+    }
+    #canvas {
+        height: 86vh;
+        /* 88.5 */
+        background-color: black;
+        width: 100vw;
+    }
+    .footer h1 {
+        padding-top: 55%;
+        /*55*/
+        font-size: 4rem;
+    }
+    .big-icon {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 2000px) {
+    .top h1 {
+        margin-top: 60%;
+        font-size: 5rem;
+    }
+    .top h4 {
+        font-size: 1.5rem;
+    }
+    .fa-angle-double-down {
+        color: white;
+        margin-top: 60%;
+        -webkit-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -moz-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -o-animation: 0.8s linear 0s infinite alternate scroll-down;
+        animation: 0.8s linear 0s infinite alternate scroll-down;
+    }
+    @-webkit-keyframes scroll-down {
+        from {
+            margin-top: 60%;
+        }
+        to {
+            margin-top: 65%;
+        }
+    }
+    @-moz-keyframes scroll-down {
+        from {
+            margin-top: 60%;
+        }
+        to {
+            margin-top: 65%;
+        }
+    }
+    @-o-keyframes scroll-down {
+        from {
+            margin-top: 60%;
+        }
+        to {
+            margin-top: 65%;
+        }
+    }
+    @keyframes scroll-down {
+        from {
+            margin-top: 60%;
+        }
+        to {
+            margin-top: 65%;
+        }
+    }
+    p {
+        font-size: 1.5rem;
+    }
+    .color-guess-game {
+        height: 91vh;
+        width: 100vw;
+    }
+    .todo-app {
+        height: 91vh;
+        width: 99.7vw;
+    }
+    #canvas {
+        height: 89vh;
+        background-color: black;
+        width: 100vw;
+    }
+    .footer h1 {
+        padding-top: 25%;
+        font-size: 5rem;
+    }
+    .big-icon {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 2000px) and (max-width: 3000px) {
+    .top h1 {
+        margin-top: 100%;
+        font-size: 5rem;
+    }
+    .top h4 {
+        font-size: 1.5rem;
+    }
+    .fa-angle-double-down {
+        color: white;
+        margin-top: 90%;
+        -webkit-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -moz-animation: 0.8s linear 0s infinite alternate scroll-down;
+        -o-animation: 0.8s linear 0s infinite alternate scroll-down;
+        animation: 0.8s linear 0s infinite alternate scroll-down;
+    }
+    @-webkit-keyframes scroll-down {
+        from {
+            margin-top: 90%;
+        }
+        to {
+            margin-top: 95%;
+        }
+    }
+    @-moz-keyframes scroll-down {
+        from {
+            margin-top: 90%;
+        }
+        to {
+            margin-top: 95%;
+        }
+    }
+    @-o-keyframes scroll-down {
+        from {
+            margin-top: 90%;
+        }
+        to {
+            margin-top: 95%;
+        }
+    }
+    @keyframes scroll-down {
+        from {
+            margin-top: 90%;
+        }
+        to {
+            margin-top: 95%;
+        }
+    }
+    p {
+        font-size: 2rem;
+    }
+    .color-guess-game {
+        height: 92vh;
+        width: 100vw;
+    }
+    .todo-app {
+        height: 92vh;
+        width: 99.7vw;
+    }
+    #canvas {
+        height: 92vh;
+        background-color: black;
+        width: 100vw;
+    }
+    .footer h1 {
+        padding-top: 25%;
+        font-size: 5rem;
+    }
+    .big-icon {
+        font-size: 3rem;
+    }
+}
