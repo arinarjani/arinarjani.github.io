@@ -14,3 +14,6 @@
 //   });
 // });
 
+document.onload = function() {
+    alert( window.innerWidth );
+}
