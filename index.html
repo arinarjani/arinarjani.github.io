@@ -3,301 +3,51 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="theme-color" content="#A22F2F">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="assets/jquery.fullPage.css" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link href="https://fonts.googleapis.com/css?family=Spinnaker" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="icon" href="https://cdn.gomix.com/69e76542-5960-4668-9665-8db410c2257a%2Ffloppy-disk-icomoon.png" />
-    <link rel="stylesheet" href="./style.css">
-    <script type="text/paperscript" canvas="canvas">
-    var sound = new Howl({
-      src: ['sounds/bubbles.mp3']
-    });
-
-    var circles = [];
-
-    keys = {
-      a: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/bubbles.mp3']
-        })
-      },
-      b: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/clay.mp3']
-        })
-      },
-      c: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/confetti.mp3']
-        })
-      },
-      d: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/corona.mp3']
-        })
-      },
-      e: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/dotted-spiral.mp3']
-        })
-      },
-      f: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/flash-1.mp3']
-        })
-      },
-      g: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/flash-2.mp3']
-        })
-      },
-      h: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/flash-3.mp3']
-        })
-      },
-      i: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/glimmer.mp3']
-        })
-      },
-      j: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/moon.mp3']
-        })
-      },
-      k: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/pinwheel.mp3']
-        })
-      },
-      l: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/piston-1.mp3']
-        })
-      },
-      m: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/piston-2.mp3']
-        })
-      },
-      n: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/piston-3.mp3']
-        })
-      },
-      o: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/splits.mp3']
-        })
-      },
-      p: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/squiggle.mp3']
-        })
-      },
-      q: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/strike.mp3']
-        })
-      },
-      r: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/suspension.mp3']
-        })
-      },
-      s: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/timer.mp3']
-        })
-      },
-      t: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/ufo.mp3']
-        })
-      },
-      u: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/veil.mp3']
-        })
-      },
-      v: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/wipe.mp3']
-        })
-      },
-      w: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/zig-zag.mp3']
-        })
-      },
-      x: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/prism-1.mp3']
-        })
-      },
-      y: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/prism-2.mp3']
-        })
-      },
-      z: {
-        sound: new Howl({
-          src: ['https://raw.githubusercontent.com/jonobr1/Neuronal-Synchrony/master/assets/A/prism-3.mp3']
-        })
-      }
-    }
-
-    function generateColor() {
-      var color;
-      var num1 = Math.floor(Math.random() * 256);
-      var num2 = Math.floor(Math.random() * 256);
-      var num3 = Math.floor(Math.random() * 256);
-
-      color = "rgb(" + num1 + ", " + num2 + ", " + num3 + ")";
-
-      return color
-    }
-
-    function onKeyDown(event) {
-      // check if the key pressed is defined in the keys object
-      if (keys[event.key]) {
-        // generate a random point
-        var point = Point.random() * view.size;
-        // add a circle to the circles array
-        circles.push(
-        new Path.Circle({
-          center: point,
-          radius: 500,
-          fillColor: generateColor()
-        })
-        );
-        // play sound
-        keys[event.key].sound.play();
-    } else if ( event.key === 'enter') {
-        document.querySelector("canvas").style.background = generateColor();
-      }
-    }
-
-    function onFrame(){
-      var length = circles.length;
-      for(var i = 0; i < length; i++) {
-        circles[i].fillColor.hue += 2;
-        circles[i].scale(.9);
-      }
-    }
-    </script>
-
+    <link rel="icon" href="./assets/img/b_triangle.png">
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
     <!--[if IE]>
         <script type="text/javascript">
              var console = { log: function() {} };
         </script>
     <![endif]-->
+    <title>Arin Arjani</title>
 </head>
-<body>
-<div id="fullpage">
-
-    <div class="section active top" id="section0">
+<body class="col">
+<img src="./assets/img/r_triangle.png">
+    <nav>
+      <ul class="row center_v_h">
+          <li><a class="nav_a_1 selected" href="./index.html">About</a></li>
+          <li><a class="nav_a_2" href="./work/work.html">Work</a></li>
+          <li><a class="nav_a_3" href="./contact/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="main_top col center_v_h">
         <h1>Arin Arjani</h1>
-        <h4>Everything below works in this window using &lt;canvas&gt; or &lt;iframe&gt;</h4>
-        <i class="fa-angle-double-down fa fa-angle-double-down fa-2x"></i>
-    </div>
-    <div class="section" id="section1">
-        <div class="slide active">
-            <div class="intro">
-                <iframe class="color-guess-game" src="https://color-guessing-game.gomix.me/"></iframe>
-                <div class="description">
-                  <p><span class="page-num">Page( 2/3 )</span>  This is the Color Guessing game I created from the <a href="https://www.udemy.com/the-web-developer-bootcamp/" target="_blank">Web Developer Bootcamp</a>.
-                     When you reload the page, the top RGB color changes to a randomly generated color chosen.  New colors also generate when the user clicks: "new colors",
-                     "easy", or "hard".  You have to click on each square until you guess the correct color.  All this was done with JavaScript.</p>
-                </div>
-            </div>
-
-        </div>
-        <div class="slide">
-            <div class="intro">
-                <iframe class="todo-app" src="https://todo-arin-1.gomix.me/"></iframe>
-                <div class="description">
-                  <p><span class="page-num">Page( 2/3 )</span>  This is the To-Do list app I created from the community page of <a href="https://gomix.com">Gomix</a> under
-                      the <a href="https://gomix.com/community/tools-for-work">Tools for Work</a>.  The original is done by "enriquesanchez"
-                      and can be seen here: <a href="https://to-do.gomix.me/">Original Todo</a>.  Instructions include pressing "Enter" or
-                      clicking the "+" sign.  To delete items simply click/touch on them. I still need to learn how to use localstorage,
-                      but I learned some new techniques with respect to scope is JS.</p>
-                </div>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="intro">
-                <canvas id="canvas" ></canvas>
-                <div class="description">
-                  <p><span class="page-num">Page( 2/3 )</span>  This is the <a href="http://www.patatap.com/" target="_blank">Patatap</a> game clone I created from
-                      the <a href="https://www.udemy.com/the-web-developer-bootcamp/" target="_blank">Web Developer Bootcamp</a>.
-                      The user can press keys A-Z to create randomly placed circles that animate away.  Also a soound plays when a key is pressed that is
-                      specific to each A-Z letter.  The background color can be changed when the user presses the enter key.
-                      This was done with <a href="http://paperjs.org/" target="_blank">Paper JS ( animation )</a>,
-                      <a href="https://howlerjs.com/" target="_blank">Howler JS ( audio )</a>, and
-                      <a href="https://github.com/jonobr1/Neuronal-Synchrony" target="_blank">Neuronal-Synchrony ( sounds )</a>.
-                       For now this only works with a keyboard; touch soon.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section" id="section2">
-        <div class="intro">
-            <div class="section footer">
-            <h1 class="contact">Contact</h1>
-            <div class="contact_icons" id="contact">
-                <div class="github icon">
-                    <a target="_blank" href="https://github.com/arinarjani?tab=repositories">
-                      <i class="fa fa-github fa-3x big-icon"></i>
-                    </a>
-                </div>
-                <div class="resume icon">
-                    <a target="_blank" href="https://resume.creddle.io/resume/ej7o1153fr0">
-                      <i class="fa fa-folder-open big-icon"></i>
-                    </a>
-                </div>
-                <div class="fcc icon">
-                    <a target="_blank" href="https://www.freecodecamp.com/arinarjani">
-                      <i class="fa fa-fire big-icon"></i>
-                    </a>
-                </div>
-                <div class="hackerRank icon">
-                    <a target="_blank" href="https://www.hackerrank.com/arinarjani">
-                      <i class="fa fa-header big-icon"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.2/paper-full.js" ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.2/howler.js"></script>
-<script type="text/javascript" src="assets/jquery.fullPage.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#fullpage').fullpage({
-            sectionsColor: ['#665349', '#665349','#A22F2F'],
-            anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-            menu: '#menu',
-            css3: true,
-            scrollingSpeed: 1000 });
-        $('#showExamples').click(function(e){
-            e.stopPropagation();
-            e.preventDefault();
-            $('#examplesList').toggle();
-        });
-
-        $('html').click(function(){
-            $('#examplesList').hide();
-        });
-    });
-</script>
-<script type="text/javascript" src="./client.js">
-
-</script>
+    </section>
+    <section class="main_bottom col center_v_h">
+        <h1>Software Engineer &amp; Web Developer</h1>
+        <ul>
+            <li>
+                <a target="_blank" href="./assets/pdf/arinarjani_resume.pdf">
+                    <i class="fa fa-folder-open fa-2x" aria-hidden="true"></i>
+                </a></li>
+            <li>
+                <a target="_blank" href="https://github.com/arinarjani?tab=repositories">
+                    <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:arinarjani@gmail.com">
+                    <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </section>
 </body>
 </html>
