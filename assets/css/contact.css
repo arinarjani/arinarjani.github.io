@@ -14,7 +14,18 @@ a:visited {
 .email:hover, .resume:hover {
 	text-decoration: line-through;
 }
-
+section {
+    height: calc(95% / 2);
+    height: -webkit-calc(95% / 2);
+    width: 100%;
+}
+img {
+  	position: absolute;
+  	align-self: center;
+  	top: 40%;
+	  max-height: 20%;
+  	width: auto;
+}
 
 /* Content */
 .main_bottom {
