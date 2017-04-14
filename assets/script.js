@@ -1,3 +1,5 @@
+// credit: http://stackoverflow.com/questions/26959219/javascript-onclick-addclass
+
 // function add_selected_class(elem) {
 //     console.log('this: ', this);
 //     var a = document.getElementsByTagName('a');
