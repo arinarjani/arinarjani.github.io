@@ -4,3 +4,9 @@ a {
 a:visited {
 	color: #fff;
 }
+.email {
+	color: #000;
+}
+.email:hover {
+	text-decoration: line-through;
+}
