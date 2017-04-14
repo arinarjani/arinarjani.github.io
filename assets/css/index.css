@@ -1,0 +1,31 @@
+/* Content */
+section {
+    height: calc(95% / 2);
+    height: -webkit-calc(95% / 2);
+    width: 100%;
+}
+img {
+  	position: absolute;
+  	align-self: center;
+  	top: 40%;
+	  max-height: 20%;
+  	width: auto;
+}
+
+/* Header */
+
+/* Footer */
+.main_bottom {
+    /*background: #C79F8B;*/
+    /*background: #92AECB;*/
+    background: #A7BED5;
+    color: #fff;
+}
+.main_bottom > ul {
+    margin-top: 25px;
+}
+.main_bottom > ul > li > a {
+    color: #fff;
+}
+.main_bottom > ul > li > a:hover {
+    color: #000;

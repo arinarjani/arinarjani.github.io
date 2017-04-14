@@ -1,0 +1,112 @@
+/* Defaults */
+.info {
+	height: 500px;
+}
+.showcase {
+	height: 800px;
+}
+h1 {
+	font-size: 3.5rem;
+}
+h4 {
+	margin-top: 10px;
+	font-size: 2.2rem;
+}
+h3 {
+	margin-top: 50px;
+	max-width: 750px;
+}
+
+img {
+  	max-height: 40%;
+  	width: 200px;
+  	margin-top: 15%;
+  	align-self: center;
+}
+nav {
+	position: fixed;
+	z-index: 99;
+}
+iframe {
+	height: 92%;
+	width: 100%;
+}
+
+/* Projects / Showcase */
+
+/* NetRango */
+.netrango_info {
+	background: #A592BD;
+	color: #fff;
+}
+.netrango_screenshot {
+	max-height: 94%;
+	width: 100%;
+	margin-top: 0;
+	align-self: flex-start;
+}
+.netrango_browser {
+	border: 1px solid #b2b5ac;
+}
+
+/* Weather App */
+.weather_app_info {
+	background: #F8824E;
+	color: #fff;
+}
+
+/* Color Guessing Game */
+.color_guessing_game_info {
+	background: #9AB4CF;
+	color: #fff;
+}
+
+/* Patatap Clone */
+.patatap_clone {
+	/*background: #FDD267;*/
+	background: #86B69C;
+	color: #fff;
+}
+
+
+/* Broswer */
+.browser {
+  width: 800px;
+  height: 500px;
+  background: #eee;
+  position: relative;
+  border-radius: 5px;
+}
+
+.title-bar {
+  height: 30px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background: #bbc6c7;
+  padding: 12px 0 0 10px;
+}
+
+.broswer > .title-bar > .controls {
+  margin-top: 50px;
+}
+
+.browser .title-bar .controls span {
+  height: 8px;
+  width: 8px;
+  border-radius: 8px;
+  margin-right: 5px;
+  float: left;
+  display: block;
+}
+
+.controls .exit {
+  background-color: #f75745;
+}
+
+.controls .minimize {
+  background-color: #ffd000;
+}
+
+.controls .full-screen {
+  background-color: #9af705;
+}

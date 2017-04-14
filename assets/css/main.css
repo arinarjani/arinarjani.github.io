@@ -1,0 +1,82 @@
+/* good for testing responsiveness: http://www.responsinator.com/ */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:400,700|Oxygen+Mono');
+/* Resets / Defaults */
+html, body {
+    height: 100%;
+    width: 100%;
+    /*font-family: 'Overpass Mono', monospace;*/
+    font-family: 'Oxygen Mono', monospace;
+    text-align: center;
+}
+body {
+  letter-spacing: 0.2rem;
+  /*line-height: 2rem;*/
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.row {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+}
+.col {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+}
+.center_v_h {
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+}
+li {
+    list-style: none;
+    display: inline;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: #000;
+}
+li:nth-child(2) {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.selected {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
+
+/* Nav */
+nav {
+    height: 5%;
+    width: 100%;
+    background: #000;
+    color: #fff;
+}
+nav > ul {
+    width: 100%;
+    height: 100%;
+}
+nav > ul > li > a {
+    color: #fff;
+}
+nav > ul > li > a:focus {
+    text-decoration: line-through;
+}
