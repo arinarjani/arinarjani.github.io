@@ -1,3 +1,4 @@
+/* Defaults */
 a {
 	color: #fff;
 }
@@ -7,6 +8,15 @@ a:visited {
 .email {
 	color: #000;
 }
-.email:hover {
+.email:visited {
+	color: #000;
+}
+.email:hover, .resume:hover {
 	text-decoration: line-through;
+}
+
+
+/* Content */
+.main_bottom {
+	background: #FAA197; 
 }
