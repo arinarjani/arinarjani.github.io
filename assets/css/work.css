@@ -2,9 +2,6 @@
 .info {
 	height: 500px;
 }
-.showcase {
-	height: 800px;
-}
 h1 {
 	font-size: 3.5rem;
 }
@@ -12,11 +9,13 @@ h4 {
 	margin-top: 10px;
 	font-size: 2.2rem;
 }
-h3 {
+p {
 	margin-top: 50px;
 	max-width: 750px;
 }
-
+h3 {
+	font-size: ;
+}
 img {
   	max-height: 40%;
   	width: 200px;
@@ -28,8 +27,35 @@ nav {
 	z-index: 99;
 }
 iframe {
-	height: 92%;
+	height: 94%;
 	width: 100%;
+}
+.block {
+	display: block;
+}
+.p_t_100 {
+	padding-top: 100px;
+}
+.p_b_100 {
+	padding-bottom: 100px;
+}
+.p_t_50 {
+	padding-top: 50px;
+}
+.p_b_50 {
+	padding-bottom: 50px;
+}
+.p_r_50 {
+	padding-right: 50px;
+}
+.p_l_50 {
+	padding-left: 50px;
+}
+.m_t_50 {
+	margin-top: 50px;
+}
+.site {
+	padding: 25px;
 }
 
 /* Projects / Showcase */
@@ -48,6 +74,18 @@ iframe {
 .netrango_browser {
 	border: 1px solid #b2b5ac;
 }
+.netrango_site {
+	background: #fff;
+	color: #000;
+	border: 1px solid #A592BD;
+}
+.netrango_site:visited {
+	color: #000;
+}
+.netrango_site:hover {
+	background: #A592BD;
+	color: #fff;
+}
 
 /* Weather App */
 .weather_app_info {
@@ -60,12 +98,55 @@ iframe {
 	background: #9AB4CF;
 	color: #fff;
 }
+.color_guessing_game_site {
+	background: #fff;
+	border: 1px solid #9AB4CF;
+	color: #000;
+}
+.color_guessing_game_site:visited {
+	color: #000;
+}
+.color_guessing_game_site:hover {
+	background: #9AB4CF;
+	color: #fff;
+}
+.color_game_link, .color_game_link:hover, .color_game_link:visited {
+    color: #9AB4CF;
+}
 
 /* Patatap Clone */
 .patatap_clone {
 	/*background: #FDD267;*/
 	background: #86B69C;
 	color: #fff;
+}
+.patatap_clone_site {
+	background: #fff;
+	color: #000;
+	border: 1px solid #86B69C;
+}
+.patatap_clone_site:visited {
+	color: #000;
+}
+.patatap_clone_site:hover {
+	background: #86B69C;
+	color: #fff;
+}
+.instructions {
+    margin-top: 50px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+}
+.instructions_list {
+	list-style: circle;
+	color: #000;
+}
+.instructions_list_items {
+	display: block;
+}
+.patatap_game_link, .patatap_game_link:hover, .patatap_game_link:visited {
+	color: #86B69C;
 }
 
 
