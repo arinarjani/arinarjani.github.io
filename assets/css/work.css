@@ -61,29 +61,29 @@ iframe {
 /* Projects / Showcase */
 
 /* NetRango */
-.netrango_info {
-	background: #A592BD;
+.journal_info {
+	background: #032541;
 	color: #fff;
 }
-.netrango_screenshot {
+.journal_screenshot {
 	max-height: 94%;
 	width: 100%;
 	margin-top: 0;
 	align-self: flex-start;
 }
-.netrango_browser {
+.journal_browser {
 	border: 1px solid #b2b5ac;
 }
-.netrango_site {
+.journal_site {
 	background: #fff;
 	color: #000;
-	border: 1px solid #A592BD;
+	border: 1px solid #032541;
 }
-.netrango_site:visited {
+.journal_site:visited {
 	color: #000;
 }
-.netrango_site:hover {
-	background: #A592BD;
+.journal_site:hover {
+	background: #032541;
 	color: #fff;
 }
 
